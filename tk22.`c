@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int rev(int n)
+{
+    int s=0;
+    for( ;n;s=s*10+n%10,n=n/10);
+    return s;
+}
+int main()
+{
+    int a,b,n;
+    scanf("%d",&n);
+    a=rev(n*n);
+    b=rev(n)*rev(n);
+    printf(a==b?"Adam":"Not Adam");
+}
+
